@@ -23,10 +23,10 @@ const RootQuery = new GraphQLObjectType({
     fields: {
         book: {
             type: BookType,
-            args: { id: { type: GraphQLString }},
+            args:{id:{ type: GraphQLString}},
             resolve(parent, args){
                 // Code to get data from db / other source.
-                return _find(books,{id: args.id});
+                return _.find(books,{id: args.id});
             }
         }
     }
